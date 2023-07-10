@@ -10,6 +10,12 @@ ADD . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Install NLTK punkt
+RUN python -m nltk.downloader punkt
+RUN python -m nltk.downloader stopwords
+RUN python -m nltk.downloader wordnet
+
+
 # Make port 80 available to the world outside this container
 EXPOSE 80
 

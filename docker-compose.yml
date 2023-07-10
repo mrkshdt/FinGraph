@@ -2,6 +2,8 @@ version: '3'
 services:
   elasticsearch:
     build: ./elasticsearch
+    environment:
+      - discovery.type=single-node
     ports:
       - "9200:9200"
     volumes:
@@ -20,8 +22,8 @@ services:
       - "7474:7474"
       - "7687:7687"
     volumes:
-      - neodata:/data
-
+      - ./neo4j/data:/data
+      - ./neo4j/logs:/logs
   secapi:
     build: ./secapi
     depends_on:

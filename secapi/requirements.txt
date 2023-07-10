@@ -6,3 +6,4 @@ elasticsearch
 neo4j
 scikit-learn
 sec_api
+networkx
