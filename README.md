@@ -6,6 +6,13 @@ This project is a proof-of-concept (PoC) that demonstrates the use of Elasticsea
 
 The aim of this project is to extract business descriptions from SEC filings, preprocess the extracted text, and then store and analyze the data using Elasticsearch, Kibana, and Neo4j. The analysis involves computing the cosine similarity between each pair of descriptions to determine how similar the businesses are to each other, and then storing the relationships in a graph database for easy retrieval and analysis.
 
+| Task | Description | Status |
+| --- | --- | --- |
+| Add dedicated user-facing Frontend | Develop a user interface where users can interact with the data and visualizations. This could be a web application that communicates with the backend services. | Pending |
+| Include stock price data | Extend the data extraction process to include stock price data. This could involve integrating with a financial data API to retrieve stock prices for the companies. | Pending |
+| Find relationships based on SEC similarity | Implement a feature in the user interface that allows users to find relationships between companies based on the similarity of their SEC filings. | Pending |
+| Find relationships based on similar stock price behavior | Implement a feature in the user interface that allows users to find relationships between companies based on similar stock price behavior. | Pending |
+
 ## Architecture
 
 ![image description](architecture-mockup.png)
