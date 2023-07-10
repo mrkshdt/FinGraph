@@ -6,12 +6,18 @@ This project is a proof-of-concept (PoC) that demonstrates the use of Elasticsea
 
 The aim of this project is to extract business descriptions from SEC filings, preprocess the extracted text, and then store and analyze the data using Elasticsearch, Kibana, and Neo4j. The analysis involves computing the cosine similarity between each pair of descriptions to determine how similar the businesses are to each other, and then storing the relationships in a graph database for easy retrieval and analysis.
 
-| Task | Description | Status |
+| Epic | Description | Status |
 | --- | --- | --- |
+| Set up Elasticsearch | Set up the Elasticsearch service for storing and retrieving data. | :white_check_mark: |
+| Set up Kibana | Set up the Kibana service for data visualization and user interface. | :white_check_mark: |
+| Set up Neo4j | Set up the Neo4j service for graph database management. | :white_check_mark: |
+| Build SEC API | Develop the SEC API for extracting data from SEC filings. | :white_check_mark: |
+| Data Management | Move the data to the right places in the architecture. | :white_check_mark: |
+| Docker Compose Setup | Set up the Docker Compose for managing the services. | :white_check_mark: |
+| Find relationships based on SEC 1ß-K text similarity | Implement a feature that allows users to find relationships between companies based on the similarity of their SEC 10K filings business description. | :white_check_mark: |
 | Add dedicated user-facing Frontend | Develop a user interface where users can interact with the data and visualizations. This could be a web application that communicates with the backend services. | Pending |
 | Include stock price data | Extend the data extraction process to include stock price data. This could involve integrating with a financial data API to retrieve stock prices for the companies. | Pending |
-| Find relationships based on SEC similarity | Implement a feature in the user interface that allows users to find relationships between companies based on the similarity of their SEC filings. | Pending |
-| Find relationships based on similar stock price behavior | Implement a feature in the user interface that allows users to find relationships between companies based on similar stock price behavior. | Pending |
+| Find relationships based on similar stock price behavior | Implement a feature that allows users to find relationships between companies based on similar stock price behavior through time series clustering. | Pending |
 
 ## Architecture
 
