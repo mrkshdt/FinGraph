@@ -40,7 +40,7 @@ def get_all_filings(api_key, tickers):
     """
     Function to get all filings for the given tickers.
     """
-    df_sp500 = pd.DataFrame()
+    dataframes = []  # Create an empty list to store dataframes
 
     for ticker in tickers:
         response = get_filings(api_key, ticker)
@@ -48,11 +48,13 @@ def get_all_filings(api_key, tickers):
             filings = response['filings']
             if len(filings) > 0:
                 data = pd.DataFrame(filings)
-                df_sp500 = df_sp500.append(data, ignore_index=True)
+                dataframes.append(data)  # Append the dataframe to the list
             else:
                 print(f"No filings found for ticker {ticker}.")
         else:
             print("Request failed. Check API key and internet connection.")
+
+    df_sp500 = pd.concat(dataframes, ignore_index=True)  # Concatenate all the dataframes in the list
 
     return df_sp500
 

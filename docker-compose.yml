@@ -1,0 +1,33 @@
+version: '3'
+services:
+  elasticsearch:
+    build: ./elasticsearch
+    ports:
+      - "9200:9200"
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+
+  kibana:
+    build: ./kibana
+    ports:
+      - "5601:5601"
+    depends_on:
+      - elasticsearch
+
+  neo4j:
+    build: ./neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neodata:/data
+
+  secapi:
+    build: ./secapi
+    depends_on:
+      - elasticsearch
+      - neo4j
+
+volumes:
+  esdata:
+  neodata:
