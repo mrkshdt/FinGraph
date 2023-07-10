@@ -14,8 +14,8 @@ The aim of this project is to extract business descriptions from SEC filings, pr
 | Build SEC API | Develop the SEC API for extracting data from SEC filings. | :white_check_mark: |
 | Data Management | Move the data to the right places in the architecture. | :white_check_mark: |
 | Docker Compose Setup | Set up the Docker Compose for managing the services. | :white_check_mark: |
-| Find relationships based on SEC 1ß-K text similarity | Implement a feature that allows users to find relationships between companies based on the similarity of their SEC 10K filings business description. | :white_check_mark: |
-| Add dedicated user-facing Frontend | Develop a user interface where users can interact with the data and visualizations. This could be a web application that communicates with the backend services. | Pending |
+| Find relationships based on SEC 10-K text similarity | Implement a feature that allows users to find relationships between companies based on the similarity of their SEC filings business description. | :white_check_mark: |
+| Add dedicated user-facing Frontend | Develop a user interface where users can interact with the data and visualizations. This could be a web application that communicates with the backend services. | :large_blue_circle: |
 | Include stock price data | Extend the data extraction process to include stock price data. This could involve integrating with a financial data API to retrieve stock prices for the companies. | Pending |
 | Find relationships based on similar stock price behavior | Implement a feature that allows users to find relationships between companies based on similar stock price behavior through time series clustering. | Pending |
 
