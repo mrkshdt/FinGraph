@@ -8,6 +8,8 @@ The aim of this project is to extract business descriptions from SEC filings, pr
 
 ## Architecture
 
+![image description](FinGraph/architecture-mockup.png)
+
 The architecture of this project consists of four Docker containers:
 
 1. **Elasticsearch Container:** Runs the Elasticsearch service, which is used to store and retrieve the processed text data.
