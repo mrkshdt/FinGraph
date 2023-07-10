@@ -8,7 +8,7 @@ The aim of this project is to extract business descriptions from SEC filings, pr
 
 ## Architecture
 
-![image description](FinGraph/architecture-mockup.png)
+![image description](architecture-mockup.png)
 
 The architecture of this project consists of four Docker containers:
 
